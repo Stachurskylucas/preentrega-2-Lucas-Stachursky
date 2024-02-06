@@ -1,0 +1,21 @@
+@mixin backgroundimage($backgroundrepeat,$backgroundsize,$backgroundposition){
+    background-repeat: $backgroundrepeat;
+    background-size: $backgroundsize;
+    background-position: $backgroundposition;
+}
+
+@mixin gridcolumns($displaygrid,$gridtemplatecolumns){
+    display: $displaygrid;
+    grid-template-columns: $gridtemplatecolumns;
+}
+
+
+@mixin gridrows($displaygrid,$gridtemplaterows){
+    display: $displaygrid;
+    grid-template-rows: $gridtemplaterows;
+}
+
+@mixin flex($displayflex,$flexwrap){
+    display: $displayflex;
+    flex-wrap: $flexwrap;
+}

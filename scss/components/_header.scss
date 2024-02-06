@@ -1,0 +1,54 @@
+// Header general 
+
+.container-fluid , .offcanvas-body , .offcanvas-header {
+    background: nth($list: $coloresbackground, $n:15 );
+    background: linear-gradient(59deg, rgba(59,33,17,1) 30%, rgba(85,66,47,1) 87%);
+
+    .offcanvas-header {
+        background-color: nth($coloresbackground,5);
+        background: linear-gradient(354deg, rgba(43,41,40,1) 38%, rgba(18,17,17,1) 87%);
+        border-bottom: 2px solid black;
+    }
+}
+
+.nav-link {
+    font-size: 16px;
+    padding: 20px 0 20px 30px;
+    color: rgb(231, 220, 199);
+    transition: transform .4s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+}
+
+.nav-container__img {
+    width: 113px;
+}
+
+
+// Mobile Design
+
+@media only screen and (max-width: 600px) {
+
+    /* Header */
+
+    .nav-container__img {
+        width: 80px;
+    }
+
+    /* Fin header */
+}
+
+// Tablet desing
+
+@media only screen and (max-width: 1000px) {
+
+    /* Header */
+
+    .nav-container__img {
+        width: 80px;
+    }
+
+    /* Fin header */
+}

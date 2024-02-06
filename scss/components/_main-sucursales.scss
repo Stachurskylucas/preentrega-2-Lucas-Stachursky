@@ -1,0 +1,207 @@
+/* MAIN SUCURSALES */
+
+.main-sucursales {
+    background-color: nth($coloresbackground,12);
+    padding-bottom: 0;
+    
+    .container-imagen-sucursales {
+        background-image: url(../img/jonathan-borba-5G9uIkAXLSc-unsplash.jpg);
+        @include backgroundimage(no-repeat, cover, center center);
+        height: 100vh;
+        opacity: .4;
+
+        img {
+            display: none;
+        }
+    }
+    
+    .sucursales-container {
+        @include flex(flex,wrap);
+        width: 80%;
+        margin: 100px 10% 0;
+        background-color: nth($coloresbackground,13);
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 20%;
+        text-align: map-get($map: $text, $key:centrar-texto );
+        padding: 20px;
+        border-radius: 40px;
+        opacity: .9;
+
+        h1 {
+            margin-top: -10px;
+            width: $width100x100;
+            color: #fff;
+            text-align: map-get($map: $text, $key:centrar-texto );
+            text-transform: uppercase;
+        }
+
+        div {
+            width: $width100x100;
+        
+            h2 {
+                font-weight: 700;
+                text-decoration: underline;
+            }
+
+            p {
+                width: $width100x100;
+            }
+
+            iframe {
+                width: $width100x100;
+                height: 210px !important;
+                border-radius: 9px;
+            }
+        }
+    }
+}
+
+/* FIN MAIN SUCURSALES */
+
+// Mobile Design
+
+@media only screen and (max-width: 600px) {
+
+    /* MAIN SUCURSALES */
+
+    .main-sucursales {
+        padding-bottom: 4%;
+
+        .sucursales-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 3px 2% 0;
+
+        h1 {
+            margin-top: -10px;
+            width: $width100x100;
+            color: #fff;
+            text-align: map-get($map: $text, $key:centrar-texto );
+            text-transform: uppercase;
+        }
+
+            div {
+                width: $width100x100;
+
+                h2 {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+
+                p {
+                    width: $width100x100;
+                }
+
+                iframe {
+                    width: $width100x100;
+                    height: 180px !important;
+                    border-radius: 9px;
+                }
+            }
+        }
+    }
+   /* FIN MAIN SUCURSALES */
+}
+
+// Mobile chiquito
+
+@media only screen and (max-width: 300px) {
+
+    /* Main sucursales */
+
+    .main-sucursales {
+        padding-bottom: 4%;
+        
+        .sucursales-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 10% 0;
+
+            h1 {
+                margin-top: -10px;
+                width: $width100x100;
+                color: #fff;
+                text-align: map-get($map: $text, $key:centrar-texto );
+                text-transform: uppercase;
+            }
+
+            div {
+                width: $width100x100;
+
+                h2 {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+
+                p {
+                    width: $width100x100;
+                }
+            
+                iframe {
+                    width: $width100x100;
+                    height: 300px;
+                    border-radius: 9px;
+                }
+            }
+        }
+    }   
+
+    /* Fin main sucursales */
+}
+
+@media only screen and (max-height: 750px) {
+
+    .footer-sucursales {
+        padding-top: 30vh;
+        background: nth($list: $coloresbackground, $n:1 );
+        background: linear-gradient(222deg, rgba(71,51,32,1) 24%, rgba(45,30,20,1) 53%, rgba(36,20,12,1) 78%);
+    }
+}
+
+// Tablet desing
+
+@media only screen and (max-width: 1000px) {
+
+    /* MAIN SUCURSALES */
+
+    .main-sucursales {
+        padding-bottom: 4%;
+        
+        .sucursales-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 10% 0 ;
+
+            h1 {
+                margin-top: -10px;
+                width: $width100x100;
+                color: #fff;
+                text-align: map-get($map: $text, $key:centrar-texto );
+                text-transform: uppercase;
+            }        
+
+            div {
+                width: $width100x100;
+
+                h2 {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+
+                p {
+                    width: $width100x100;
+                }
+
+                iframe {
+                    width: $width100x100;
+                    height: 300px;
+                    border-radius: 9px;
+                }
+            
+            }
+        }
+    }
+
+    /* FIN MAIN SUCURSALES */
+}

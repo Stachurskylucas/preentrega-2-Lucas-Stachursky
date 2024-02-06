@@ -1,0 +1,12 @@
+
+/* Para todo el codigo */
+
+* {
+@extend %resetcode !optional;
+
+    body {
+        background: nth($coloresbackground,3);
+    }
+}
+
+/* Fin todo el codigo */

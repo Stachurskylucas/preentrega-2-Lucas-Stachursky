@@ -1,0 +1,288 @@
+/* MAIN INDEX */
+
+/* Carrousel */
+
+.hr-carrousel {
+    display: none;
+
+    img {
+        height: 50%;
+        margin-top: -50px;
+    }
+}
+
+/* Fin carrousel */
+
+/* separador */
+.separador {
+    margin-top: $separador;
+    background-color: nth($coloresbackground,6);
+    border: 1px solid rgb(0, 0, 0);
+
+    h3 {
+        color: rgba(29, 26, 26, 0.897);
+        justify-content: map-get($map:$flex,$key:centrar-x );
+        align-items: map-get($map:$flex,$key:centrar-y );
+        text-align: map-get($map: $text, $key:centrar-texto );   
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+/* fin separador */
+
+/* CARD PRODUCTOS */
+
+#fondo-cards {
+    background-color: nth($coloresbackground,7);
+    margin-top: $separador;
+    margin-bottom: -16px;
+    border: 1px solid rgb(0, 0, 0);
+
+        h1 {
+            color: rgb(0, 0, 0);
+            text-align: map-get($map: $text, $key:centrar-texto );
+            font-size: 50px;
+            padding-top: 16px;
+        }
+    
+        .hr-titulo {
+            position: relative;
+            width: 60%;
+            margin: auto;
+            background: nth($coloresbackground,8);
+            height: 8px;
+            border: none;
+            opacity: 1;
+        }
+
+        .contenedor-cards {
+            @include flex(flex,wrap);
+            justify-content: space-evenly;
+            padding: 30px 0;
+            background-color: nth($coloresbackground,9);
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            border-radius: 8px;
+
+            .card {
+                margin: 22px 20px;
+                border: 2px solid #46280d;
+                border-radius: 30px;
+
+                .card-body {
+                    text-align: map-get($map: $text, $key:centrar-texto );
+                    font-size: 20px;
+                    background: rgb(187, 181, 170);
+
+                    a {
+                        @extend %inside-card-button !optional
+                    }
+                }
+            }
+        }
+}
+
+.div-container__productos {
+    display: block;
+    text-align: map-get($map: $text, $key:centrar-texto );
+    margin-top: 30px;
+
+        button {
+            @extend %products-button;
+        }
+}
+/* Fin cards productos */
+
+
+/* Recomendaciones clientes */
+
+.contenedor-grid {
+    @include gridcolumns(grid, repeat(3, 1fr));
+    column-gap: 4rem;
+    justify-content: center;
+    margin: 80px 20px;
+
+    section {
+        text-align: map-get($map: $text, $key:centrar-texto );
+
+        .fa-solid , .fa-cat {
+            font-size: 70px;
+            padding-bottom: 34px;
+        }
+
+        .material-symbols-outlined {
+            font-size: 80px;
+            padding: 0 0 23px 0;
+        }
+
+        h4 {
+            font-weight: 700;
+        }
+        
+        p {
+            font-weight: 400;
+            font-size: 1.07rem;
+        }
+
+        button {
+            @extend %button-recomendaciones-clientes;
+        }
+        
+    }
+}
+
+/* Fin recomendaciones clientes */
+
+/* Video del café */
+
+.container-video-cafe {
+    @include gridcolumns(grid, repeat(2, 1fr));
+    column-gap: 2.3rem;
+    background-color: nth($coloresbackground,10);
+    margin: -16px 0 -16px;
+    padding: 80px;
+    border: 1px solid rgb(0, 0, 0);
+    align-items: center;
+
+        div {
+            color: rgb(255, 255, 255);
+
+            section {
+                
+                h2 {
+                    font-size: 43px;
+                    text-align: map-get($map: $text, $key:centrar-texto );
+                }
+
+                p {
+                    font-size: 23px;
+                    text-align: map-get($map: $text, $key:centrar-texto );
+                    padding-top: 30px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+                button {
+                    @extend %button-video-cafe;
+                }
+            }
+        }
+
+        video {
+            box-shadow: -1px 1px 18px 0 #000;
+            width: 100%;
+        }
+}
+
+.div-container__productos__btn , .btn , .btn-primary , .container-recomendation__btn , .container-video-cafe__btn {
+    box-shadow: -4px 1px 18px 0 #000;
+}
+
+/* Fin video del café */
+
+/* FIN MAIN INDEX */
+
+// Mobile Design
+
+@media only screen and (max-width: 600px) {
+
+    /* Main INDEX */
+
+    .main-index {
+        margin-top: 105px;
+
+        #carouselExampleIndicators {
+            width: 100%;
+        }
+
+        .contenedor-grid {
+            @include flex(flex,wrap);
+
+            section {
+                margin: 25px 0 25px 0;
+
+                p {
+                    padding-top: 10px;
+                }
+
+                a {
+                    display: block;
+                    text-align: map-get($map: $text, $key:centrar-texto );
+                }
+            }
+            
+        }
+
+        .container-video-cafe {
+            @include flex(flex,wrap);
+            row-gap: 3rem;
+            padding: 50px;
+        }
+    }
+
+    /* Fin main INDEX */
+}        
+
+// Mobile chiquito
+
+@media only screen and (max-width: 300px) {
+
+    /* Main INDEX*/
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .container-video-cafe {
+
+        div {
+            width: 100%;
+
+            section {
+
+                h2 {
+                    font-size: 2rem;
+                }
+        
+                p {
+                    font-size: .9rem;
+                }
+            }
+            button {
+                font-size: 1.1rem;
+            }
+        }  
+    }
+
+    /* Fin main INDEX*/
+}
+
+// Tablet desing
+
+@media only screen and (max-width: 1000px) {
+
+    /* Main INDEX */
+
+    .container-video-cafe {
+        @include flex(flex,wrap);
+        row-gap: 3rem;
+
+            a {
+                display: block;
+                text-align: map-get($map: $text, $key:centrar-texto );
+            }
+
+            p {
+                font-size: 27px;
+            }
+
+            button {
+                margin-top: 20px;
+            }
+    }
+
+    /* Fin main INDEX */
+}

@@ -1,0 +1,158 @@
+/* MAIN PRODUCTOS  */
+
+.main-productos {
+    @include gridcolumns(grid, 1.5fr 1.5fr);
+    padding-top: 13.5%;
+    background-color: nth($coloresbackground,11);
+    background: linear-gradient(254deg, rgba(85,55,29,1) 14%, rgba(113,83,59,1) 47%, rgba(207,165,123,1) 92%);
+    
+    #container-grande-productos {
+        @include flex(flex,wrap);
+        justify-content: space-around;
+        align-items: center;
+        grid-area: productos;
+        margin-bottom: 10px;
+
+        .container-card-productos {
+            padding: 20px;
+            margin: 2px 0;
+            margin-bottom: -1px;
+            width: 24%;
+            box-sizing: border-box;
+                 
+            img {
+                width: $width100x100;
+                border: 2px solid #000000;
+                box-shadow: 0px 0px 4px #000;
+            }
+
+            section {
+                width: $width100x100;
+                margin: 20px 0;
+                text-align: map-get($map: $text, $key:centrar-texto );
+
+                h3 {
+                    color: #fff;
+                    padding-bottom: 9px;
+                }
+
+                a {
+                    @extend %button-productos;
+                }
+            }
+        }
+    }
+    
+}
+
+/* FIN MAIN PRODUCTOS  */
+
+// Mobile Design
+
+@media only screen and (max-width: 600px) {
+
+    /* MAIN PRODUCTOS */
+
+    .main-productos {
+        margin-top: 17.5%;
+
+        #container-grande-productos {
+            display: block !important;
+
+            .container-card-productos {
+                @include flex(flex,wrap);
+                padding: 20px;
+                margin: 2px 0;
+                margin-bottom: -1px;
+                width: $width100x100 !important;
+
+                img {
+                    width: $width100x100;
+                    border: 2px solid #000000;
+                    box-shadow: 0px 0px 4px #000;
+                }
+
+                section {
+                    width: $width100x100;
+                    margin: 20px 0;
+                    text-align: map-get($map: $text, $key:centrar-texto );
+
+                    h3 {
+                        color: #fff;
+                        padding-bottom: 9px;
+                    }
+
+                    a {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+/* FIN MAIN PRODUCTOS  */
+}
+
+// Mobile chiquito
+
+@media only screen and (max-width: 300px) {
+
+    /* Main Productos */
+
+    .main-productos {
+        margin-top: 34.5%;
+
+        .container-card-productos__section a.btn.btn-primary {
+            padding: 13px;
+            width: 60%;
+        }
+    }
+
+    /* Fin main productos */
+}
+
+// Tablet desing
+
+@media only screen and (max-width: 1000px) {
+
+    /* MAIN PRODUCTOS */
+
+    .main-productos {
+        padding-top: 15.5%;
+    }
+
+    #container-grande-productos {
+        @include gridcolumns(grid, repeat(2, 50%));
+
+        .container-card-productos {
+            padding: 20px;
+            margin: 2px 0;
+            margin-bottom: -1px;
+            width: 50% !important;
+           
+            img {
+                width: $width100x100;
+                border: 2px solid #000000;
+                box-shadow: 0px 0px 4px #000;
+            }
+
+            section {
+                width: $width100x100;
+                margin: 20px 0;
+                text-align: map-get($map: $text, $key:centrar-texto );
+
+                
+                h3 {
+                    color: #fff;
+                    padding-bottom: 9px;
+                }
+
+                a {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    /* FIN MAIN PRODUCTOS  */
+}
